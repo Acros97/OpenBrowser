@@ -10,12 +10,42 @@
         Title="MainBroser" Height="600" Width="800" Background="#FF464646" WindowStyle="None" Loaded="FormMainWindow_Loaded">
 
     <Grid Name="gridWeb">
-
-        <DockPanel x:Name="dockWeb" LastChildFill="True" Margin="1,32,1,0">
-            <Wpf:WebView2 Name="webView" />
-        </DockPanel>
-        <TabControl Name="pagesTab" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="640" Height="34">
+        <!-- ================================================ Tab Pages ================================================ -->
+        <TabControl Name="pagesTab" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="714" Height="24">
             <TabItem Header="Tab Page 1" />
         </TabControl>
+
+        <!-- ================================================ Search Panel ================================================ -->
+        <DockPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="616" LastChildFill="True" Margin="98,24,0,0">
+            <TextBox Name="txtSearch" Height="24" TextWrapping="Wrap" Text="TextBox" Width="614" Background="#FF494949" BorderBrush="#FF4F4F4F" Foreground="White" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="14" FontWeight="Bold" KeyDown="TxtSearch_KeyDown" MouseEnter="TxtSearch_MouseEnter" />
+        </DockPanel>
+
+        <!-- ================================================ Buttons ================================================ -->
+        <Button x:Name="btnClose" Content="" Height="17" Width="16" HorizontalAlignment="Right"      Margin="0,7,6,0"  VerticalAlignment="Top"   Background="#FFFB0000"  HorizontalContentAlignment="Right" VerticalContentAlignment="Top" FlowDirection="RightToLeft" Click="BtnClose_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Ellipse Fill="Red" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnMaximize" Content="" Height="17" Width="16" HorizontalAlignment="Right"      Margin="0,7,31,0"  VerticalAlignment="Top"   Background="#FFFB0000"  HorizontalContentAlignment="Right" VerticalContentAlignment="Top" FlowDirection="RightToLeft" Click="BtnMaximize_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Ellipse x:Name="btnMaximize" Fill="DarkOrange" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnMinimize" Content="" Height="17" Width="16" HorizontalAlignment="Right"      Margin="0,7,57,0"  VerticalAlignment="Top"   Background="#FFFB0000"  HorizontalContentAlignment="Right" VerticalContentAlignment="Top" FlowDirection="RightToLeft" Click="BtnMinimize_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Ellipse x:Name="btnMaximize" Fill="ForestGreen" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <!-- ================================================ Web view ================================================ -->
+        <DockPanel x:Name="dockWeb" LastChildFill="True" Margin="1,58,1,0">
+            <Wpf:WebView2 Name="webView" />
+        </DockPanel>
     </Grid>
 </Window>
