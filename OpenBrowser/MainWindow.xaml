@@ -1,0 +1,21 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OpenBrowser"
+        xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Name="formMainWindow" x:Class="OpenBrowser.MainWindow"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        mc:Ignorable="d"
+        Title="MainBroser" Height="600" Width="800" Background="#FF464646" WindowStyle="None" Loaded="FormMainWindow_Loaded">
+
+    <Grid Name="gridWeb">
+
+        <DockPanel x:Name="dockWeb" LastChildFill="True" Margin="1,32,1,0">
+            <Wpf:WebView2 Name="webView" />
+        </DockPanel>
+        <TabControl Name="pagesTab" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="640" Height="34">
+            <TabItem Header="Tab Page 1" />
+        </TabControl>
+    </Grid>
+</Window>
